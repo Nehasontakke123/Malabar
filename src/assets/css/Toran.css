@@ -1,0 +1,18 @@
+.toran-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .toran {
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+    color: #b76e79;
+    background: linear-gradient(to right, #ffdab9, #ffb6c1);
+    width: 100%;
+  }
+  

@@ -1,0 +1,124 @@
+/* CategoryPage.css */
+
+.category-products-container {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Title */
+.category-products-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Responsive Grid */
+.category-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+/* Product Card */
+.category-product-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    position: relative;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.category-product-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Optimization */
+.category-product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; /* Prevents blur */
+    background-color: #f9f9f9;
+    display: block;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+/* Product Details */
+.category-product-details {
+    padding: 10px;
+}
+
+/* Product Name */
+.category-product-name {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Price */
+.category-product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #a0005a;
+    margin-bottom: 5px;
+}
+
+/* SKU */
+.category-product-sku {
+    font-size: 14px;
+    color: #666;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* For Tablets */
+@media (max-width: 1024px) {
+    .category-products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 15px;
+    }
+    .category-product-image {
+        height: 180px;
+    }
+}
+
+/* For Mobile */
+@media (max-width: 768px) {
+    .category-products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+    }
+    .category-product-image {
+        height: 150px;
+    }
+    .category-products-title {
+        font-size: 20px;
+    }
+    .category-product-name {
+        font-size: 14px;
+    }
+    .category-product-price {
+        font-size: 16px;
+    }
+    .category-product-sku {
+        font-size: 12px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+    .category-products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 8px;
+    }
+    .category-product-image {
+        height: 130px;
+    }
+}
+

@@ -1,0 +1,91 @@
+.gemstone-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.gemstone-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px; 
+    color: black;
+}
+
+.gemstone-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px; 
+}
+
+/* Grid Layout - images  */
+.gemstone-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+    flex-wrap: wrap;
+}
+
+/* Gemstone Card */
+.gemstone-card {
+    position: relative;
+    width: 320px; 
+    height: 390px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Image Styling */
+.gemstone-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.gemstone-card:hover {
+    transform: scale(1.05);
+}
+
+/* Image Overlay Effect */
+.gemstone-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 30%, transparent 50%, rgba(0, 0, 0, 0.5) 70%);
+    transition: opacity 0.4s ease-in-out;
+    opacity: 0;
+    border-radius: 10px;
+}
+
+.gemstone-card:hover::before {
+    opacity: 1; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gemstone-grid {
+        gap: 10px;
+    }
+    .gemstone-card {
+        width: 200px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gemstone-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .gemstone-card {
+        width: 90%;
+        height: 300px;
+    }
+}

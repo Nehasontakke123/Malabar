@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&display=swap');
+
+.bride-quote-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(to right, #fff0f5, #ffe4e1);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  width: 600px;
+  margin: auto;
+}
+
+/* Heading Styling */
+.bride-quote-heading {
+  font-family: 'Great Vibes', cursive;
+  font-size: 40px;
+  color: #b76e79;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Quote Styling */
+.bride-quote {
+  font-size: 22px;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+  color: #b76e79;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border-left: 5px solid #b76e79;
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  max-width: 90%;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ----- RESPONSIVE STYLES ----- */
+
+/* For tablets and small screens */
+@media (max-width: 768px) {
+  .bride-quote-container {
+    padding: 30px;
+    width: 80%;
+  }
+
+  .bride-quote-heading {
+    font-size: 35px;
+  }
+
+  .bride-quote {
+    font-size: 20px;
+    padding: 15px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .bride-quote-container {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .bride-quote-heading {
+    font-size: 30px;
+  }
+
+  .bride-quote {
+    font-size: 18px;
+    padding: 10px;
+  }
+}

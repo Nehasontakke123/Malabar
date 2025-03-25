@@ -1,0 +1,154 @@
+.brides-showcase-container {
+  text-align: center;
+  padding: 40px;
+  background-color: #fffaf0;
+}
+
+.brides-showcase-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #b22222;
+}
+
+.brides-showcase-description {
+  font-size: 16px;
+  color: #555;
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+.brides-showcase-full-description {
+  font-size: 16px;
+  color: #333;
+  max-width: 800px;
+  margin: 20px auto;
+  line-height: 1.6;
+}
+
+.brides-showcase-full-description strong {
+  color: #b22222;
+}
+
+.brides-showcase-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+/* Bengal and Bihari Bride side by side  */
+.brides-showcase-card:nth-last-child(2),
+.brides-showcase-card:last-child {
+  grid-column: span 1; 
+  display: block; 
+}
+
+.brides-showcase-card {
+  text-align: center;
+}
+
+.brides-showcase-img {
+  width: 100%;
+  max-width: 230px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.brides-showcase-name {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #8b0000;
+}
+
+/* **Responsive Adjustments** */
+@media (max-width: 768px) {
+  .brides-showcase-list {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px;
+  }
+  
+  .brides-showcase-card:nth-last-child(2),
+  .brides-showcase-card:last-child {
+    grid-column: span 1; 
+  }
+
+  .brides-showcase-title {
+    font-size: 24px;
+  }
+
+  .brides-showcase-description,
+  .brides-showcase-full-description {
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile Screens साठी */
+@media (max-width: 480px) {
+  .brides-showcase-list {
+    grid-template-columns: repeat(1, 1fr); /* 1 column */
+  }
+
+  .brides-showcase-card:nth-last-child(2),
+  .brides-showcase-card:last-child {
+    grid-column: span 1; /* Full width */
+  }
+}
+.brides-showcase-card {
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.brides-showcase-card:hover {
+  transform: scale(1.05); /* हलकासा Zoom effect */
+}
+
+.brides-showcase-img {
+  width: 100%;
+  max-width: 230px;
+  height: auto;
+  border-radius: 10px;
+  transition: filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.brides-showcase-card:hover .brides-showcase-img {
+  filter: brightness(1.1) drop-shadow(0px 0px 10px rgba(255, 182, 217, 0.6)); /* हलकासा Glow effect */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.flower {
+  position: fixed;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  background-image: url('../images/flower.jpg'); /* Make sure image exists */
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: fall linear infinite;
+  opacity: 0.8;
+  z-index: 999;
+}
+@keyframes fall {
+  0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0.5; }
+}
+
+.brides-showcase {
+  text-align: center;
+  background: #f7f0eb;
+  padding: 20px;
+}
+
+.showcase-heading {
+  font-size: 28px;
+  font-style: italic;
+  color: #7a2243;
+}
+
+.showcase-heading span {
+  font-weight: bold;
+  color: #b22257;
+}
+

@@ -1,0 +1,70 @@
+/* GoldRatePopup.css */
+
+/* Popup Container */
+.gold-rate-container {
+    position: relative;
+  }
+  
+  /* Gold Rate Button */
+  .gold-rate-button {
+    background-color: #f5c518; /* Gold color */
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .gold-rate-button:hover {
+    background-color: #d4a017;
+  }
+  
+  /* Popup Box */
+  .gold-rate-popup {
+    position: absolute;
+    right: 0;
+    top: 48px;
+    width: 250px;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 16px;
+    z-index: 50;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Popup Heading */
+  .gold-rate-popup h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Close Button */
+  .gold-rate-close {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .gold-rate-close:hover {
+    background-color: #cc0000;
+  }
+  
+  /* Fade In Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

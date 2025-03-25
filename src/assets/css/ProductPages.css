@@ -1,0 +1,251 @@
+/* Product Page Main Container */
+.product-details-container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    display: flex;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Left Section - Images */
+.product-images-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 40%;
+    align-items: center;
+}
+
+/* Main Large Image */
+.main-product-image {
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.main-product-image:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0px 4px 10px rgba(151, 0, 72, 0.5));
+}
+
+/* Small Thumbnail Images */
+.product-thumbnails {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.thumbnail-image {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease-in-out, border 0.2s;
+}
+
+.thumbnail-image:hover {
+    transform: scale(1.2);
+    border: 2px solid #970048;
+    box-shadow: 0px 4px 10px rgba(151, 0, 72, 0.5);
+}
+
+/* Right Section - Product Details */
+.product-details {
+    width: 60%;
+    padding: 20px;
+}
+
+/* Product Name */
+.product-name {
+    font-size: 28px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* Product Info */
+.product-details p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #444;
+}
+
+/* Highlighted Text */
+.product-price {
+    font-size: 26px;
+    font-weight: bold;
+    color: #970048;
+}
+
+/* Product Availability */
+.product-availability {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+.product-availability.available {
+    color: white;
+    background-color: #28a745;
+}
+
+.product-availability.out-of-stock {
+    color: white;
+    background-color: red;
+}
+
+/* Price Breakdown */
+.price-breakdown {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    border-left: 5px solid #970048;
+    box-shadow: 0px 4px 12px rgba(151, 0, 72, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.price-breakdown h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #970048;
+}
+
+/* Buy Now Button */
+.buy-now-button {
+    margin-top: 20px;
+    background: linear-gradient(90deg, #970048, #ff2e63);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0px 4px 12px rgba(151, 0, 72, 0.5);
+}
+
+.buy-now-button:hover {
+    background: linear-gradient(90deg, #ff2e63, #970048);
+    transform: scale(1.05);
+    box-shadow: 0px 6px 14px rgba(151, 0, 72, 0.6);
+}
+
+/* Error Messages */
+.error-message {
+    text-align: center;
+    color: red;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+
+
+/* 📱 Responsive Design */
+
+/* 🔹 Tablet Screens (Max-width: 768px) */
+@media (max-width: 768px) {
+    .product-details-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+    }
+  
+    .product-images-container {
+      width: 100%;
+    }
+  
+    .main-product-image {
+      max-height: 380px;
+    }
+  
+    .product-thumbnails {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    .thumbnail-image {
+      width: 55px;
+      height: 55px;
+    }
+  
+    .product-details {
+      width: 100%;
+      text-align: center;
+      padding: 15px;
+    }
+  
+    .product-name {
+      font-size: 24px;
+    }
+  
+    .product-price {
+      font-size: 22px;
+    }
+  
+    .buy-now-button {
+      font-size: 16px;
+      padding: 10px 16px;
+    }
+  }
+  
+  /* 📱 Mobile Screens (Max-width: 480px) */
+  @media (max-width: 480px) {
+    .product-details-container {
+      gap: 10px;
+      padding: 10px;
+    }
+  
+    .product-name {
+      font-size: 20px;
+    }
+  
+    .product-details p {
+      font-size: 14px;
+    }
+  
+    .product-price {
+      font-size: 20px;
+    }
+  
+    .product-availability {
+      font-size: 16px;
+      padding: 4px;
+    }
+  
+    .product-thumbnails {
+      gap: 8px;
+    }
+  
+    .thumbnail-image {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .price-breakdown {
+      padding: 10px;
+    }
+  
+    .buy-now-button {
+      font-size: 14px;
+      padding: 8px 14px;
+    }
+  }
+  
+ 

@@ -1,0 +1,205 @@
+/*  Login Form Overlay (Backdrop) */
+.login-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end; /* Profile icon च्या exact बाजूला */
+    align-items: flex-start;
+    padding-top: 80px; /* Navbar खाली space */
+    z-index: 9999; /* सर्वात वर ठेवण्यासाठी */
+    /* background: rgba(0, 0, 0, 0.3); हलका अंधार */
+    /* backdrop-filter: blur(5px); */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/*  Login/Register Form Container */
+.login-container {
+    position: absolute;
+    top: 70px; /* Navbar नंतर space */
+    right: 20px; /* Profile icon च्या exact बाजूला */
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10000; /* इतर सर्व घटकांवर ठेवण्यासाठी */
+    transform: scale(0.95);
+    animation: popup 0.3s ease-in-out forwards;
+}
+
+/*  Popup Animation */
+@keyframes popup {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/*  Close Button */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    color: #a30052;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: #800040;
+}
+
+/*  Heading */
+.login-container h2 {
+    margin-bottom: 15px;
+    color: #a30052;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/*  Input Fields */
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    color: #333;
+    outline: none;
+    transition: 0.3s;
+}
+
+.login-container input:focus {
+    border-color: #a30052;
+}
+
+/*  Password Field with Eye Icon */
+.password-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-field input {
+    padding-right: 40px;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: gray;
+    transition: 0.3s;
+}
+
+.eye-icon:hover {
+    color: #a30052;
+}
+
+/*  Submit Button */
+.login-btn {
+    background: #a30052;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #800040;
+}
+
+/*  Toggle Login/Register */
+.toggle-text {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: #a30052;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        right: 50%;
+        transform: translate(50%, 10%);
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .login-container h2 {
+        font-size: 18px;
+    }
+
+    .login-container input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .login-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .toggle-text {
+        font-size: 12px;
+    }
+
+    .toggle-btn {
+        font-size: 12px;
+    }
+}
+
+
+/* SweetAlert2 OK Button Custom Styling */
+.swal2-confirm {
+    background-color: #ff6600 !important; /* Custom button color */
+    color: white !important; /* Text color */
+    font-size: 16px !important;
+    padding: 10px 20px !important;
+    border-radius: 8px !important;
+  }
+  
+  .swal2-popup {
+    font-family: "Poppins", sans-serif !important; /* Custom Font */
+  }
+  

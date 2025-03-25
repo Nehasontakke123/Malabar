@@ -1,0 +1,153 @@
+.brides-showcase-video {
+    margin-top: 50px;
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* 3D Depth Shadow */
+    border: 5px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .brides-showcase-video::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    /* background: linear-gradient(45deg, #ff4081, #ffea00, #ff4081); */
+    border-radius: 25px;
+    z-index: -1;
+    animation: shine 3s infinite linear;
+  }
+  
+  /* Animated Gold Shine */
+  @keyframes shine {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+  }
+  
+  /* ✨ Showcase Heading Hover Effect */
+.showcase-heading {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.8);
+    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    display: inline-block;
+}
+
+/* 🟡 Hover Effect (Glow + Scale) */
+.showcase-heading:hover {
+    transform: scale(1.1);
+    text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.9), 0px 0px 20px rgba(255, 165, 0, 0.8);
+}
+
+  
+  .gold-text {
+    color: #d4af37; /* Golden Color */
+    animation: gold-shine 2s infinite alternate;
+  }
+  
+  /* Gold Shine Effect */
+  @keyframes gold-shine {
+    0% { text-shadow: 0px 0px 5px rgba(255, 215, 0, 0.6); }
+    100% { text-shadow: 0px 0px 15px rgba(255, 215, 0, 1); }
+  }
+  
+  .video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .video-container iframe {
+    max-width: 70%;
+    height: 550px; /* Increased height */
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .video-container iframe:hover {
+    transform: scale(1.05); /* Smooth Hover Effect */
+  }
+  
+
+
+  /* ✨ Showcase Heading Hover Effect */
+
+
+
+
+  @keyframes sparkle {
+    0% { text-shadow: 0px 0px 5px rgba(255, 223, 0, 0.6); }
+    25% { text-shadow: 0px 0px 15px rgba(255, 223, 0, 0.8); }
+    50% { text-shadow: 0px 0px 30px rgba(255, 223, 0, 1), 0px 0px 10px rgba(173, 216, 230, 0.9); } /* Diamond Blue Tint */
+    75% { text-shadow: 0px 0px 15px rgba(255, 223, 0, 0.8); }
+    100% { text-shadow: 0px 0px 5px rgba(255, 223, 0, 0.6); }
+}
+
+/* 🔷 Diamond Sparkle Animation */
+@keyframes diamond-sparkle {
+    0% { opacity: 0.2; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0.2; transform: scale(0.9); }
+}
+
+/* 🌟 Extra Sparkles (Small Animated Glitter) */
+.sparkle-effect {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 223, 0, 0.8) 100%);
+    border-radius: 50%;
+    animation: diamond-sparkle 2s infinite ease-in-out;
+}
+
+/* 👑 Fancy Gold & Diamond Shine */
+.showcase-heading span {
+    color: #FFD700; /* Gold */
+    font-weight: bold;
+    animation: sparkle 2.5s infinite ease-in-out;
+    position: relative;
+}
+
+/* 💎 Hover Effect - Premium Shine */
+.showcase-heading span:hover {
+    transform: scale(1.1) rotate(2deg);
+    text-shadow: 
+        0px 0px 30px rgba(255, 223, 0, 1), 
+        0px 0px 50px rgba(255, 165, 0, 0.9), 
+        0px 0px 80px rgba(173, 216, 230, 1); 
+    transition: 0.3s ease-in-out;
+}
+
+.sparkle-effect {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, rgba(255, 223, 0, 1) 0%, rgba(255, 165, 0, 0.8) 100%);
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkle-animation 1.5s infinite ease-in-out;
+  }
+  
+  @keyframes sparkle-animation {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+  }
+  

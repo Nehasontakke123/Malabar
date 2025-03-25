@@ -1,0 +1,149 @@
+.malabar-section {
+    text-align: center;
+    background-color: #f9f5f2;
+    padding: 30px;
+  }
+  
+  .malabar-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3d1f1e;
+  }
+  
+  .malabar-description {
+    font-size: 16px;
+    color: #6a4d4b;
+    margin-bottom: 20px;
+  }
+  
+  .malabar-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .malabar-box {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+  }
+  
+  .malabar-img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .malabar-text {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .product-code {
+    font-size: 12px;
+    color: #777;
+  }
+  
+  .product-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #a61d55;
+  }
+  
+  .view-all-btn {
+    background-color: #a61d55;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .view-all-btn:hover {
+    background-color: #881444;
+  }
+  
+
+
+  /* 📱 Responsive Breakpoints */
+
+/* 🔹 Tablet Screens (Max-width: 768px) */
+@media (max-width: 768px) {
+  .malabar-title {
+    font-size: 22px;
+  }
+
+  .malabar-description {
+    font-size: 14px;
+  }
+
+  .malabar-box {
+    width: 180px; 
+    padding: 12px;
+  }
+
+  .malabar-text {
+    font-size: 13px;
+  }
+
+  .product-code {
+    font-size: 11px;
+  }
+
+  .product-price {
+    font-size: 15px;
+  }
+
+  .view-all-btn {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+}
+
+/* 📱 Mobile Screens (Max-width: 480px) */
+@media (max-width: 480px) {
+  .malabar-section {
+    padding: 20px;
+  }
+
+  .malabar-title {
+    font-size: 20px;
+  }
+
+  .malabar-description {
+    font-size: 13px;
+  }
+
+  .malabar-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .malabar-box {
+    width: 90%; /* Full width for mobile */
+    padding: 10px;
+  }
+
+  .malabar-text {
+    font-size: 12px;
+  }
+
+  .product-code {
+    font-size: 10px;
+  }
+
+  .product-price {
+    font-size: 14px;
+  }
+
+  .view-all-btn {
+    font-size: 12px;
+    padding: 7px 14px;
+  }
+}
