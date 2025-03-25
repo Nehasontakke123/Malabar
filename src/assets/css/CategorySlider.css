@@ -4,19 +4,20 @@
     width: 100%;
     padding: 10px;
     display: flex;
-    justify-content: center; /* Centering the slider */
+    justify-content: center;
     cursor: pointer;
+    overflow: hidden; /* Prevents overflow issues */
 }
 
 /* Slider Scroll */
 .slider {
     display: flex;
-    gap: 6px; /* Increased gap */
-    /* overflow-x: auto; */
+    gap: 8px; /* Increased gap for better spacing */
+    overflow-x: auto;
     scroll-behavior: smooth;
     padding: 10px;
     white-space: nowrap;
-    justify-content: center; /* Centering content */
+    justify-content: flex-start; /* Align items from left */
 }
 
 /* Hide Scrollbar */
@@ -29,17 +30,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 120px; /* Increased width */
+    min-width: 110px; /* Default size */
+    text-align: center;
 }
 
 /* Category Image */
 .category-image {
-    width: 100px; /* Increased size */
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     border: 3px solid #ff66b2;
-    padding: 6px;
-    transition: all 0.3s ease-in-out;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Hover Effect */
@@ -52,8 +54,7 @@
 .category-name {
     font-size: 14px;
     color: #444;
-    margin-top: 8px;
-    text-align: center;
+    margin-top: 6px;
     font-weight: bold;
 }
 
@@ -69,7 +70,7 @@
     cursor: pointer;
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
 }
 
 /* Hover Effect for Buttons */
@@ -80,22 +81,22 @@
 
 /* Positioning the Buttons */
 .slider-btn.left {
-    left: 10px;
+    left: 5px;
 }
 
 .slider-btn.right {
-    right: 10px;
+    right: 5px;
 }
 
 /* ✅ Responsive Design */
 @media screen and (max-width: 768px) {
     .category-item {
-        min-width: 100px;
+        min-width: 90px;
     }
 
     .category-image {
-        width: 80px;
-        height: 80px;
+        width: 75px;
+        height: 75px;
     }
 
     .category-name {
@@ -110,16 +111,20 @@
 
 @media screen and (max-width: 480px) {
     .category-item {
-        min-width: 90px;
+        min-width: 85px;
     }
 
     .category-image {
-        width: 70px;
-        height: 70px;
+        width: 65px;
+        height: 65px;
     }
 
     .category-name {
         font-size: 12px;
+    }
+
+    .slider {
+        gap: 5px;
     }
 
     .slider-btn {
