@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";  // Navigation साठी import
+import { useNavigate } from "react-router-dom";  
 import banner from "../assets/images/Brides-of-India-banner.jpg";
 import dazzlingBride from "../assets/images/Bride_01.jpg";
 import bejeweledBride from "../assets/images/Bride_02.jpg";

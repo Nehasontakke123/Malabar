@@ -1,3 +1,4 @@
+/* Brides Section */
 .brides-section {
     text-align: center;
     padding: 40px 20px;
@@ -15,7 +16,7 @@
 }
 
 .banner-img {
-    width: 75%;
+    width: 70%; /* Reduced width */
     height: auto;
     border-radius: 8px;
     transition: transform 0.5s ease-in-out;
@@ -23,28 +24,27 @@
 
 /* Unique Hover Effect on Banner */
 .banner:hover .banner-img {
-    transform: scale(1.1);  /* Zoom Effect */
-    filter: brightness(0.6); /* Darken Effect */
-   
+    transform: scale(1.1);
+    filter: brightness(0.6);
 }
 
 /* Brides Images (Overlay on Banner) */
 .brides-list {
     position: absolute;
-    top: 80%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    gap: 15px;
+    gap: 10px;
     justify-content: center;
-    width: 80%;
+    width: 85%;
     flex-wrap: wrap;
 }
 
 /* Bride Cards */
 .bride-card {
     position: relative;
-    min-width: 150px;
+    min-width: 140px;
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
@@ -84,9 +84,9 @@
 /* Bride Name - Initially Hidden Below */
 .bride-name {
     position: absolute;
-    bottom: 70px; 
+    bottom: 50px;
     left: 50%;
-    transform: translateX(-50%) translateY(20px); 
+    transform: translateX(-50%) translateY(20px);
     color: white;
     font-size: 14px;
     font-weight: bold;
@@ -96,11 +96,11 @@
 
 /* Hover */
 .bride-card:hover .bride-name {
-    transform: translateX(-50%) translateY(0); 
+    transform: translateX(-50%) translateY(0);
     opacity: 1;
 }
 
-/* "View All" Button - Brides List  */
+/* "View All" Button - Brides List */
 .view-all-container {
     position: absolute;
     left: 90%;
@@ -125,33 +125,47 @@
     transform: scale(1.1);
 }
 
-
+/* Brides Heading */
 .brides-heading {
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  .brides-heading h2 {
+}
+
+.brides-heading h2 {
     font-size: 24px;
     font-weight: bold;
     color: #000;
-  }
-  
-  .brides-heading p {
+}
+
+.brides-heading p {
     font-size: 16px;
     color: #555;
-  }
-  
+}
 
 /* 🔥 Responsive Design */
+@media (max-width: 1024px) {
+    .banner-img {
+        width: 70%;
+    }
+
+    .brides-list {
+        top: 85%;
+        width: 90%;
+    }
+
+    .bride-card {
+        min-width: 130px;
+    }
+}
+
 @media (max-width: 768px) {
     .banner-img {
-        width: 90%;
+        width: 75%;
     }
 
     .brides-list {
         top: 90%;
-        width: 90%;
+        width: 100%;
         flex-wrap: nowrap;
         overflow-x: auto;
     }
@@ -168,7 +182,7 @@
 
 @media (max-width: 480px) {
     .banner-img {
-        width: 100%;
+        width: 85%;
     }
 
     .brides-list {
