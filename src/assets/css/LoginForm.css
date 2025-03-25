@@ -150,44 +150,23 @@
 .toggle-btn:hover {
     text-decoration: underline;
 }
-
-/* Mobile Responsive */
 @media (max-width: 768px) {
     .login-container {
         width: 90%;
-        right: 50%;
-        transform: translate(50%, 10%);
+        right: 5%;
+        transform: translate(0, 10%);
     }
 }
 
 @media (max-width: 480px) {
     .login-container {
         width: 95%;
+        right: 2.5%;
         padding: 15px;
-    }
-
-    .login-container h2 {
-        font-size: 18px;
-    }
-
-    .login-container input {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .login-btn {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .toggle-text {
-        font-size: 12px;
-    }
-
-    .toggle-btn {
-        font-size: 12px;
+        transform: translate(0, 10%);
     }
 }
+
 
 
 /* SweetAlert2 OK Button Custom Styling */
