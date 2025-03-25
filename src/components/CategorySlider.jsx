@@ -11,7 +11,7 @@ import img6 from "../assets/images/Gold-Jhumka.png";
 import img7 from "../assets/images/solitare.png";
 import img8 from "../assets/images/Bangle.png";
 import img9 from "../assets/images/Offer.png";
-import img10 from "../assets/images/mangalsutra.png";
+import img10 from "../assets/images/Mangalsutra.png";
 import img11 from "../assets/images/Chain.png";
 
 // Category Data
