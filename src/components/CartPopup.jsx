@@ -45,3 +45,10 @@ const CartPopup = ({ onClose }) => {
 };
 
 export default CartPopup;
+
+
+
+
+
+
+
