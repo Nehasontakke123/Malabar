@@ -332,20 +332,151 @@
 
 
 
-import React, { useState, useEffect, useRef } from "react";
+// import React, { useState, useEffect, useRef } from "react";
+// import { useNavigate } from "react-router-dom";
+// import { FaSearch, FaUser, FaHeart, FaShoppingCart, FaStore } from "react-icons/fa";
+// import { IoIosCall } from "react-icons/io";
+// import { IoLogoWhatsapp } from "react-icons/io";
+// import { MdOutlineLanguage } from "react-icons/md";
+// import Swal from "sweetalert2";
+// import LoginForm from "./LoginForm"; // Import LoginForm modal
+// import "../assets/css/Nav.css";
+
+// const Navbar = () => {
+//   const navigate = useNavigate();
+//   const [cartCount, setCartCount] = useState(0);
+//   const [showLoginForm, setShowLoginForm] = useState(false); // State for modal
+
+//   useEffect(() => {
+//     const updateCartCount = () => {
+//       const cart = JSON.parse(localStorage.getItem("cart")) || [];
+//       setCartCount(cart.length);
+//     };
+
+//     window.addEventListener("cartUpdated", updateCartCount);
+//     updateCartCount();
+
+//     return () => {
+//       window.removeEventListener("cartUpdated", updateCartCount);
+//     };
+//   }, []);
+
+//   const handleCartClick = () => {
+//     const cart = JSON.parse(localStorage.getItem("cart")) || [];
+//     if (cart.length === 0) {
+//       Swal.fire({
+//         title: "Cart is empty",
+//         text: "Your cart is empty. Please add some products.",
+//         icon: "info",
+//         confirmButtonColor: "#d4af37",
+//       });
+//       return;
+//     }
+
+//     let htmlList = "<ul style='list-style: none; padding: 0;'>";
+//     cart.forEach((item, index) => {
+//       htmlList += `<li style="margin-bottom: 10px;">
+//                      <strong>${item.title || "Product " + (index + 1)}</strong>
+//                      <br/>
+//                      ${item.message}
+//                    </li>`;
+//     });
+//     htmlList += "</ul>";
+
+//     Swal.fire({
+//       title: "Your Cart",
+//       html: htmlList,
+//       confirmButtonText: "Close",
+//       confirmButtonColor: "#d4af37",
+//     });
+//   };
+
+//   return (
+//     <>
+//       <nav className="navbar">
+//         <div className="top-navbar">
+//           <div className="logo-section">
+//             <div className="logo-circle">M</div>
+//             <div className="logo-text">
+//               <h1>MALABAR GOLD & DIAMONDS</h1>
+//               <p>CELEBRATE THE BEAUTY OF LIFE</p>
+//             </div>
+//           </div>
+
+//           <div className="search-bar">
+//             <input type="text" placeholder="Search" />
+//             <FaSearch className="search-icon" />
+//           </div>
+
+//           <div className="icons-section">
+//             <div className="contact-info">
+//               <IoIosCall />
+//               <span>+91 22 62300916</span>
+//             </div>
+//             <div className="contact-info">
+//               <IoLogoWhatsapp />
+//               <span>+91 9167780916</span>
+//             </div>
+//             <div className="icon-container">
+//               <FaStore className="icon" title="Stores" />
+//               <span>Stores</span>
+//             </div>
+//             <div className="icon-container">
+//               <MdOutlineLanguage className="icon" title="Country" />
+//               <span>Country</span>
+//             </div>
+//             <div className="icon-container" onClick={() => setShowLoginForm(true)}>
+//               {/* Opens LoginForm modal */}
+//               <FaUser className="icon" title="Profile" />
+//               <span>Profile</span>
+//             </div>
+//             <div className="icon-container">
+//               <FaHeart className="icon" title="Wishlist" />
+//               <span>Wishlist</span>
+//             </div>
+//             <div className="icon-container cart-container" onClick={handleCartClick}>
+//               <FaShoppingCart className="icon" title="Cart" />
+//               <span>Cart</span>
+//               {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
+//             </div>
+//           </div>
+//         </div>
+
+//         <div className="bottom-navbar">
+//           <ul className="nav-links">
+//             {["DIAMOND", "GOLD", "GEMSTONE", "UNCUT DIAMOND", "PLATINUM", "GOLD COINS", "SILVER", "WATCHES", "GIFTS", "JEWELLERY", "GIFT CARDS", "GOLD RATE"].map((category) => (
+//               <li key={category}>{category}</li>
+//             ))}
+//           </ul>
+//         </div>
+//       </nav>
+
+//       {/* Show Login Modal when showLoginForm is true */}
+//       {showLoginForm && <LoginForm onClose={() => setShowLoginForm(false)} />}
+//     </>
+//   );
+// };
+
+// export default Navbar;
+
+
+
+
+
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaSearch, FaUser, FaHeart, FaShoppingCart, FaStore } from "react-icons/fa";
 import { IoIosCall } from "react-icons/io";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { MdOutlineLanguage } from "react-icons/md";
 import Swal from "sweetalert2";
-import LoginForm from "./LoginForm"; // Import LoginForm modal
+import LoginForm from "./LoginForm";
 import "../assets/css/Nav.css";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const [cartCount, setCartCount] = useState(0);
-  const [showLoginForm, setShowLoginForm] = useState(false); // State for modal
+  const [showLoginForm, setShowLoginForm] = useState(false);
 
   useEffect(() => {
     const updateCartCount = () => {
@@ -361,32 +492,11 @@ const Navbar = () => {
     };
   }, []);
 
-  const handleCartClick = () => {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    if (cart.length === 0) {
-      Swal.fire({
-        title: "Cart is empty",
-        text: "Your cart is empty. Please add some products.",
-        icon: "info",
-        confirmButtonColor: "#d4af37",
-      });
-      return;
-    }
-
-    let htmlList = "<ul style='list-style: none; padding: 0;'>";
-    cart.forEach((item, index) => {
-      htmlList += `<li style="margin-bottom: 10px;">
-                     <strong>${item.title || "Product " + (index + 1)}</strong>
-                     <br/>
-                     ${item.message}
-                   </li>`;
-    });
-    htmlList += "</ul>";
-
+  const handleCategoryClick = (category) => {
     Swal.fire({
-      title: "Your Cart",
-      html: htmlList,
-      confirmButtonText: "Close",
+      title: `${category} Collection`,
+      text: `Explore our exclusive ${category} collection.`,
+      icon: "info",
       confirmButtonColor: "#d4af37",
     });
   };
@@ -426,7 +536,6 @@ const Navbar = () => {
               <span>Country</span>
             </div>
             <div className="icon-container" onClick={() => setShowLoginForm(true)}>
-              {/* Opens LoginForm modal */}
               <FaUser className="icon" title="Profile" />
               <span>Profile</span>
             </div>
@@ -434,7 +543,7 @@ const Navbar = () => {
               <FaHeart className="icon" title="Wishlist" />
               <span>Wishlist</span>
             </div>
-            <div className="icon-container cart-container" onClick={handleCartClick}>
+            <div className="icon-container cart-container">
               <FaShoppingCart className="icon" title="Cart" />
               <span>Cart</span>
               {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
@@ -444,19 +553,22 @@ const Navbar = () => {
 
         <div className="bottom-navbar">
           <ul className="nav-links">
-            {["DIAMOND", "GOLD", "GEMSTONE", "UNCUT DIAMOND", "PLATINUM", "GOLD COINS", "SILVER", "WATCHES", "GIFTS", "JEWELLERY", "GIFT CARDS", "GOLD RATE"].map((category) => (
-              <li key={category}>{category}</li>
+            {[
+              "DIAMOND", "GOLD", "GEMSTONE", "UNCUT DIAMOND", "PLATINUM",
+              "GOLD COINS", "SILVER", "WATCHES", "GIFTS", "JEWELLERY",
+              "GIFT CARDS", "GOLD RATE"
+            ].map((category) => (
+              <li key={category} onClick={() => handleCategoryClick(category)}>
+                {category}
+              </li>
             ))}
           </ul>
         </div>
       </nav>
 
-      {/* Show Login Modal when showLoginForm is true */}
       {showLoginForm && <LoginForm onClose={() => setShowLoginForm(false)} />}
     </>
   );
 };
 
 export default Navbar;
-
-
