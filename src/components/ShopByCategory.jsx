@@ -6,7 +6,7 @@ import silverCoins from "../assets/images/silver.jpg";
 import diamondBangles from "../assets/images/bangles.jpg";
 import mangalsutras from "../assets/images/mangalsutra.jpg";
 import "../assets/css/CategorySection.css";
-// import '../assets/css/ProductPages.css'
+
 
 const categories = [
   { id: 1, title: "Coin Pendant", image: coinPendant, highlight: "Coins", category: "Coin-Pendants" },
