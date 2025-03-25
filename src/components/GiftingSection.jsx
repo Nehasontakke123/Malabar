@@ -50,22 +50,8 @@ const GiftingSection = () => {
     });
   };
 
-  // 🛒 Add to Cart Function
-  // const addToCart = (item) => {
-  //   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  //   cart.push(item);
-  //   localStorage.setItem("cart", JSON.stringify(cart));
-  //   Swal.fire({
-  //     title: "Added to Cart!",
-  //     text: `${item.title} has been added to your cart.`,
-  //     icon: "success",
-  //     confirmButtonColor: "#d4af37",
-  //   });
-  // };
-
-
-
-  const addToCart = (item) => {
+  
+const addToCart = (item) => {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart.push(item);
     localStorage.setItem("cart", JSON.stringify(cart));

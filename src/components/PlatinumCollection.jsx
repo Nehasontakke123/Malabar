@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../assets/css/PlatinumCollection.css";
-import { FaHeart, FaRegHeart } from "react-icons/fa"; // Wishlist Icons
+import { FaHeart, FaRegHeart } from "react-icons/fa"; 
 import platinumImg1 from "../assets/images/MSD-collection.jpg";
 import platinumImg2 from "../assets/images/Men-in-Platinum.jpg";
 

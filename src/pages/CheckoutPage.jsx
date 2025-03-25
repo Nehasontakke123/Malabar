@@ -108,52 +108,6 @@ export default CheckoutPage;
 
 
 
-// import React, { useState, useEffect } from "react";
-// import { useNavigate } from "react-router-dom";
-// import "../assets/css/CheckPage.css"; // Ensure this is imported at the end
-
-// const CheckoutPage = () => {
-//     const navigate = useNavigate();
-//     const [products, setProducts] = useState([]);
-
-//     useEffect(() => {
-//         const storedProducts = localStorage.getItem("buyNowProducts");
-//         if (storedProducts) {
-//             setProducts(JSON.parse(storedProducts)); 
-//         }
-//     }, []);
-
-//     const handleRemove = (index) => {
-//         let updatedProducts = [...products];
-//         updatedProducts.splice(index, 1); 
-//         localStorage.setItem("buyNowProducts", JSON.stringify(updatedProducts));
-//         setProducts(updatedProducts);
-//     };
-
-//     if (products.length === 0) {
-//         return <p className="checkout-empty-warning">⚠ No products found! Try buying again.</p>;
-//     }
-
-//     return (
-//         <div className="checkout-wrapper">
-//             <h1 className="checkout-heading">Your Cart</h1>
-//             {products.map((product, index) => (
-//                 <div key={index} className="checkout-item">
-//                     <img src={product.images?.[0] || product.image} alt={product.name} className="checkout-item-img" />
-//                     <div className="checkout-item-info">
-//                         <h2 className="checkout-item-title">{product.name}</h2>
-//                         <p className="checkout-item-category"><strong>Category:</strong> {product.category}</p>
-//                         <p className="checkout-item-price"><strong>Price:</strong> ₹{product.price}</p>
-//                         <button className="checkout-delete-btn" onClick={() => handleRemove(index)}>Remove</button>
-//                     </div>
-//                 </div>
-//             ))}
-//         </div>
-//     );
-// };
-
-// export default CheckoutPage;
-
 
 
 

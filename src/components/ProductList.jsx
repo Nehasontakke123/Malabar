@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-// import '../assets/css/CategoryPage.css'
-// import '../assets/css/ProductDetails.css'
+
 
 const ProductList = () => {
   const { category } = useParams();

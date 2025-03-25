@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { FaEye, FaEyeSlash } from "react-icons/fa"; // Eye icons import
+import { FaEye, FaEyeSlash } from "react-icons/fa"; 
 import "../assets/css/LoginForm.css";
 
 const LoginForm = ({ onClose }) => {

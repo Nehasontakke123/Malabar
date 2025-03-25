@@ -14,8 +14,6 @@ import ShopByCategory from "../components/ShopByCategory";
 import OurCollection from "../components/OurCollection";
 import MalabarSection from "../components/MalabarSection";
 import ShopByGender from "../components/ShopByGender";
-// import AutoScrollingShowcase from "../components/AutoScrollingShowcase";
-// import NewArrivalsSection from "../components/NewArrivalsSection";
 import BridesSection from "../components/BridesSection";
 import BridesOfIndia from "../components/BridesOfIndia";
 import GiftingSection from "../components/GiftingSection";
@@ -46,8 +44,6 @@ const HomePage = () => {
       <OurCollection/>
       {/* <MalabarSection/> */}
       <ShopByGender/>
-      {/* <AutoScrollingShowcase/> */}
-      {/* <NewArrivalsSection/> */}
       <BridesSection/>
       {/* <BridesOfIndia/> */}
       <GiftingSection/>

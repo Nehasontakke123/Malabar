@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../assets/css/Video.css"; // वेगळा CSS वापरण्यासाठी
+import "../assets/css/Video.css"; 
 
 const Video = () => {
   useEffect(() => {

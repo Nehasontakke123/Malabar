@@ -1,35 +1,3 @@
-// const BridalQuote = () => {
-//     const bridalQuotes = [
-//       "A bride is a woman with a fine prospect of happiness behind her.",
-//       "Happiness and confidence are the prettiest things you can wear on your wedding day.",
-//       "A wedding dress is both intimate and personal for a woman—it must reflect her personality and style.",
-//       "A happy marriage is a long conversation that always seems too short.",
-//       "True love stories never have endings.",
-//       "Every bride is beautiful. It’s like newborn babies or puppies. They can’t help it.",
-//       "A wedding is the golden ring in a chain whose beginning is a glance and whose ending is eternity.",
-//     ];
-  
-//     return (
-//       <div className="bride-quote-container">
-//         <div className="bride-quote-wrapper">
-//           {bridalQuotes.map((quote, index) => (
-//             <blockquote key={index} className="bride-quote">
-//               “{quote}”
-//             </blockquote>
-//           ))}
-//         </div>
-//       </div>
-//     );
-//   };
-  
-//   export default BridalQuote;
-  
-
-
-
-
-
-
 import { useState, useEffect } from "react";
 import '../assets/css/BridalQuote.css'
 
