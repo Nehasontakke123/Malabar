@@ -1,4 +1,4 @@
-.category-section {
+/* .category-section {
   text-align: center;
   padding: 30px 90px;
   cursor: pointer;
@@ -86,4 +86,173 @@
 
 
 
+ */
 
+
+
+
+
+
+
+ /* Category Section */
+.category-section {
+  text-align: center;
+  padding: 40px 5%;
+}
+
+/* Category Title */
+.category-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Category Description */
+.category-description {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Category Wrapper (Grid Layout) */
+.category-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+/* Category Box */
+.category-box {
+  width: 100%;
+  max-width: 380px;
+  background: linear-gradient(to right, #300000, #652f2f);
+  border-radius: 12px;
+  padding: 35px;
+  text-align: center;
+  transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* Hover Effects */
+.category-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(255, 255, 255, 0.4);
+}
+
+.category-box:hover .category-img {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Category Image */
+.category-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* Category Text */
+.category-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-top: 12px;
+  text-transform: capitalize;
+}
+
+/* Highlighted Text */
+.category-highlight {
+  color: gold;
+  font-weight: bold;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 1024px) {
+  .category-title {
+    font-size: 28px;
+  }
+
+  .category-description {
+    font-size: 16px;
+  }
+
+  .category-wrapper {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .category-box {
+    max-width: 350px;
+    padding: 30px;
+  }
+
+  .category-img {
+    height: 220px;
+  }
+
+  .category-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .category-title {
+    font-size: 26px;
+  }
+
+  .category-description {
+    font-size: 15px;
+  }
+
+  .category-wrapper {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+
+  .category-box {
+    max-width: 320px;
+    padding: 25px;
+  }
+
+  .category-img {
+    height: 200px;
+  }
+
+  .category-text {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-title {
+    font-size: 24px;
+  }
+
+  .category-description {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .category-wrapper {
+    grid-template-columns: repeat(1, minmax(180px, 1fr));
+  }
+
+  .category-box {
+    max-width: 280px;
+    padding: 20px;
+  }
+
+  .category-img {
+    height: 180px;
+  }
+
+  .category-text {
+    font-size: 16px;
+  }
+}
