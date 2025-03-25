@@ -16,6 +16,7 @@ import CheckoutPage from "./pages/CheckoutPage";
 import LoginForm from "./components/LoginForm";
 // import Dashboard from "./pages/Dashboard"; // Import Dashboard Page
 
+
 function App() {
   return (
     <>
@@ -27,7 +28,6 @@ function App() {
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/products/:category" element={<ProductList />} />
         <Route path="/login" element={<LoginForm />} />
-        {/* <Route path="/dashboard" element={<Dashboard />} /> ✅ Fixed Route */}
         <Route path="/gemstone-jewellery" element={<GemstoneJewellery />} />
         <Route path="/shop-by-category" element={<CategorySection />} />
         <Route path="/our-collection" element={<OurCollection />} />
