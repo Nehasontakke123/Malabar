@@ -1,44 +1,3 @@
-/* .carousel-container {
-  width: 100%;
-  height: auto; 
-  margin: 0;
-  padding: 0;
-  overflow: hidden; 
-} */
-
-/* .slider-image {
-  width: 100%;
-  height: 90vh; 
-  max-height: 700px; 
-  object-fit: cover;
-} */
-
-/* ✅ Tablet & Small Laptops */
-/* @media screen and (max-width: 1024px) {
-  .slider-image {
-    height: 75vh;
-    max-height: 600px;
-  }
-} */
-
-/* ✅ Mobile Screens */
-/* @media screen and (max-width: 768px) {
-  .slider-image {
-    height: 65vh;
-    max-height: 500px;
-  }
-} */
-
-/* ✅ Small Phones (Less than 480px width) */
-/* @media screen and (max-width: 480px) {
-  .slider-image {
-    height: 55vh;
-    max-height: 400px;
-  }
-} */
-
-
-
 .carousel-container {
   width: 100%;
   height: auto;
@@ -49,16 +8,15 @@
 
 .slider-image {
   width: 100%;
-  height: 90vh; /* Desktop वर 90% viewport height */
+  height: auto; /* Dynamic height ठेवले */
   max-height: 700px;
-  object-fit: cover; /* Image कट न होता perfect fit होईल */
-  display: block; /* Extra space remove करण्यासाठी */
+  object-fit: contain; /* Image कट न होता संपूर्ण दिसेल */
+  display: block;
 }
 
 /* ✅ Tablet & Small Laptops */
 @media screen and (max-width: 1024px) {
   .slider-image {
-    height: 75vh;
     max-height: 600px;
   }
 }
@@ -66,7 +24,6 @@
 /* ✅ Mobile Screens */
 @media screen and (max-width: 768px) {
   .slider-image {
-    height: 60vh;
     max-height: 500px;
   }
 }
@@ -74,7 +31,6 @@
 /* ✅ Small Phones (Less than 480px width) */
 @media screen and (max-width: 480px) {
   .slider-image {
-    height: 50vh;
     max-height: 400px;
   }
 }
