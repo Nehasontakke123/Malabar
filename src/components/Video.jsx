@@ -24,14 +24,18 @@ const Video = () => {
 
   return (
     <div className="brides-showcase-video">
-   <h2 className="show-the-way">It's time to #ShowTheWay</h2>
+      <h2 className="show-the-way">It's time to #ShowTheWay</h2>
 
-    <div className="video-container">
-      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-      <div className="video-overlay">It's time to #ShowTheWay</div>
+      <div className="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/G4o-Y01r-bY" 
+          frameBorder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowFullScreen
+        ></iframe>
+        {/* <div className="video-overlay">It's time to #ShowTheWay</div> */}
+      </div>
     </div>
-  </div>
-  
   );
 };
 

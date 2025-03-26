@@ -50,7 +50,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #FFD700; /* Gold Color */
+  color: #970048; /* Gold Color */
   font-size: 28px;
   font-weight: bold;
   text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.8);
@@ -111,7 +111,7 @@
   font-size: 28px;
   font-weight: bold;
   text-align: center;
-  color: #FFD700; /* Gold */
+  color: #970048;
   position: relative;
   display: inline-block;
   text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
